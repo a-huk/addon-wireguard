@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # hadolint ignore=DL3003
 RUN \
     apk update \
-    && apk upgrade \
+    && apk add --upgrade musl \
     && apk add --no-cache --virtual .build-dependencies \
         build-base \
         git \
